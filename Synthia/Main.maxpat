@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 79.0, 935.0, 683.0 ],
+		"rect" : [ 90.0, 45.0, 1086.0, 717.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -58,8 +58,8 @@
 					"orientation" : 1,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 402.0, 989.0, 136.0, 48.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 50.0, 48.0 ],
+					"patching_rect" : [ 414.437561, 985.0, 136.0, 48.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 50.0, 34.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.gain~",
@@ -332,7 +332,7 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 44.0, 149.33667, 946.666687, 492.0 ],
+					"patching_rect" : [ 44.0, 148.33667, 946.666687, 492.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -352,7 +352,7 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 514.333374, 644.666748, 436.0, 189.333328 ],
+					"patching_rect" : [ 517.333374, 657.666748, 436.0, 189.333328 ],
 					"viewvisibility" : 1
 				}
 
@@ -432,37 +432,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-2", 1 ],
-					"midpoints" : [ 981.166687, 642.001731, 414.500061, 642.001731 ],
-					"order" : 1,
-					"source" : [ "obj-45", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 53.5, 646.001731, 102.500061, 646.001731 ],
-					"order" : 1,
 					"source" : [ "obj-45", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-38", 1 ],
-					"midpoints" : [ 981.166687, 643.501679, 940.833374, 643.501679 ],
-					"order" : 0,
-					"source" : [ "obj-45", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-38", 0 ],
-					"midpoints" : [ 53.5, 644.501679, 523.833374, 644.501679 ],
-					"order" : 0,
-					"source" : [ "obj-45", 0 ]
+					"source" : [ "obj-45", 1 ]
 				}
 
 			}
@@ -547,35 +525,35 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-2::obj-4" : [ "slider[3]", "slider[1]", 0 ],
 			"obj-5" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-2::obj-4" : [ "slider[3]", "slider[1]", 0 ],
 			"obj-2::obj-11" : [ "slider[4]", "slider[1]", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Delay.maxpat",
-				"bootpath" : "~/Desktop/Granular Synth",
+				"bootpath" : "~/Desktop/gitShow1/Synthia",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Chrous.maxpat",
-				"bootpath" : "~/Desktop/Granular Synth",
+				"bootpath" : "~/Desktop/gitShow1/Synthia",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sugarSynth.maxpat",
-				"bootpath" : "~/Desktop/Granular Synth/sugarSynth",
+				"bootpath" : "~/Desktop/gitShow1/Synthia/sugarSynth",
 				"patcherrelativepath" : "./sugarSynth",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "x_sugar~.maxpat",
-				"bootpath" : "~/Desktop/Granular Synth/sugarSynth",
+				"bootpath" : "~/Desktop/gitShow1/Synthia/sugarSynth",
 				"patcherrelativepath" : "./sugarSynth",
 				"type" : "JSON",
 				"implicit" : 1
@@ -607,8 +585,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
