@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 5,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 90.0, 45.0, 1086.0, 717.0 ],
+		"rect" : [ 90.0, 79.0, 879.0, 717.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -59,7 +59,7 @@
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
 					"patching_rect" : [ 414.437561, 985.0, 136.0, 48.0 ],
-					"presentation_rect" : [ 0.0, 0.0, 50.0, 34.0 ],
+					"presentation_rect" : [ 0.0, 0.0, 50.0, 48.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_longname" : "live.gain~",
@@ -177,12 +177,12 @@
 					"fontsize" : 11.595187,
 					"id" : "obj-4",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 439.937561, 948.000061, 69.0, 21.0 ],
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patching_rect" : [ 439.937561, 948.000061, 60.0, 21.0 ],
 					"style" : "",
-					"text" : "c.freeverb~"
+					"text" : "freeverb~"
 				}
 
 			}
@@ -525,41 +525,41 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-5" : [ "live.gain~", "live.gain~", 0 ],
 			"obj-2::obj-4" : [ "slider[3]", "slider[1]", 0 ],
-			"obj-2::obj-11" : [ "slider[4]", "slider[1]", 0 ]
+			"obj-2::obj-11" : [ "slider[4]", "slider[1]", 0 ],
+			"obj-5" : [ "live.gain~", "live.gain~", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "Delay.maxpat",
-				"bootpath" : "~/Desktop/gitShow1/Synthia",
+				"bootpath" : "~/gitShow1/Synthia",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "Chrous.maxpat",
-				"bootpath" : "~/Desktop/gitShow1/Synthia",
+				"bootpath" : "~/gitShow1/Synthia",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "sugarSynth.maxpat",
-				"bootpath" : "~/Desktop/gitShow1/Synthia/sugarSynth",
-				"patcherrelativepath" : "./sugarSynth",
+				"bootpath" : "~/gitShow1/Synthia",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "x_sugar~.maxpat",
-				"bootpath" : "~/Desktop/gitShow1/Synthia/sugarSynth",
-				"patcherrelativepath" : "./sugarSynth",
+				"bootpath" : "~/gitShow1/Synthia",
+				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "c.freeverb~.mxo",
+				"name" : "freeverb~.mxo",
 				"type" : "iLaX"
 			}
  ],
@@ -585,8 +585,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"fontsize" : [ 12.059008 ],
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
+					"fontsize" : [ 12.059008 ]
 				}
 ,
 				"parentstyle" : "",
