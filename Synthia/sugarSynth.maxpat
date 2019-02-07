@@ -171,13 +171,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-109",
-					"linecount" : 3,
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1462.5, 86.0, 83.0, 53.0 ],
-					"text" : "sprintf \\\"%sShimmer.wav\\\""
+					"patching_rect" : [ 1462.5, 86.0, 185.0, 23.0 ],
+					"text" : "sprintf \\\"%sFuzz E Bass.wav\\\""
 				}
 
 			}
@@ -360,7 +359,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 175.0, 960.0, 127.0, 23.0 ],
-					"restore" : [ 1057.800621483160967, 3000.492147476274567 ],
+					"restore" : [ 1.0, 1.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -379,7 +378,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 195.25, 439.0, 127.0, 23.0 ],
-					"restore" : [ 37 ],
+					"restore" : [ 13 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -436,7 +435,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 835.0, 277.0, 116.0, 23.0 ],
-					"restore" : [ -1.5 ],
+					"restore" : [ 0.2 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -455,7 +454,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 631.0, 295.0, 70.0, 23.0 ],
-					"restore" : [ 2.6 ],
+					"restore" : [ 0.6 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -474,7 +473,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "" ],
 					"patching_rect" : [ 448.5, 327.0, 93.0, 23.0 ],
-					"restore" : [ 2.0 ],
+					"restore" : [ 55.0 ],
 					"saved_object_attributes" : 					{
 						"parameter_enable" : 0,
 						"parameter_mappable" : 0
@@ -2604,7 +2603,7 @@
 					"patching_rect" : [ 341.0, 917.0, 676.0, 30.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.0, 483.0, 679.0, 30.0 ],
-					"size" : 6865.532879818593756,
+					"size" : 1.0,
 					"varname" : "rslider"
 				}
 
@@ -3811,11 +3810,11 @@
 					"fontsize" : 12.0,
 					"id" : "obj-25",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
+					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 994.0, 446.0, 58.0, 23.0 ],
-					"text" : "cycle~ 2"
+					"patching_rect" : [ 994.0, 446.0, 47.0, 23.0 ],
+					"text" : "noise~"
 				}
 
 			}
@@ -4010,6 +4009,7 @@
 					"allowdrag" : 0,
 					"bgcolor" : [ 0.517647, 0.94902, 0.937255, 0.156863 ],
 					"buffername" : "sugarbuf",
+					"chanoffset" : 0,
 					"fontsize" : 12.0,
 					"gridcolor" : [ 0.392157, 0.392157, 0.392157, 0.501961 ],
 					"id" : "obj-7",
@@ -4056,7 +4056,7 @@
 					"patching_rect" : [ 344.0, 719.0, 673.0, 199.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 13.0, 267.5, 673.0, 210.0 ],
-					"size" : 6866.0
+					"size" : 2.0
 				}
 
 			}
@@ -5352,8 +5352,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

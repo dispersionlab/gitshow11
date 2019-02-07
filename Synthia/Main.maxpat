@@ -497,9 +497,9 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-2::obj-4" : [ "slider[3]", "slider[1]", 0 ],
 			"obj-2::obj-11" : [ "slider[4]", "slider[1]", 0 ],
 			"obj-5" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-2::obj-4" : [ "slider[3]", "slider[1]", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -596,8 +596,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
