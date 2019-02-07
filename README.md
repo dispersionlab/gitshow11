@@ -1,6 +1,7 @@
 # gitShow1
 open ~/Synthia/Main.maxpat
 
+Score: "Bleat Sampras"
 Turn DSP On. Once you hear audio, experiment with all the settings. When max crashes, and it probably will then:
 1. record the sound of your anguish in your favourite DAW
 2. save it as yeaaarrgh.wav (precisely spelled) in ~/Synthia/, (overwrite it if it already exists)
