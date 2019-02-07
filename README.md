@@ -8,6 +8,7 @@ Turn DSP On. Once you hear audio, experiment with all the settings. When max cra
 ```shell
 git add .
 git commit -m "i did it"
+```
 
 4. Then relaunch ~/Synthia/Main.maxpat
 5. Drag 'yeaaarrgh.wav' into the soundfile loader in ~/Synthia/Main.maxpat
