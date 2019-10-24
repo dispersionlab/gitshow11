@@ -1,0 +1,43 @@
+1548531527|Michael Palumbo|A|/.gitignore
+1548531527|Michael Palumbo|A|/LICENSE
+1548531527|Michael Palumbo|A|/README.md
+1548531563|Michael Palumbo|M|/.gitignore
+1548905167|amirbahador|M|/README.md
+1548908160|amirbahador|A|/Synthia/Chrous.maxpat
+1548908160|amirbahador|A|/Synthia/Delay.maxpat
+1548908160|amirbahador|A|/Synthia/Main.maxpat
+1548908160|amirbahador|A|/Synthia/sugarSynth/sugarSynth.maxpat
+1548908160|amirbahador|A|/Synthia/sugarSynth/x_sugar~.maxpat
+1549251346|amirbahador|M|/README.md
+1549251346|amirbahador|M|/Synthia/Main.maxpat
+1549251346|amirbahador|A|/Synthia_Talks_Alot.aif
+1549504007|michaelpalumbo|A|/Synthia/sugarSynth.maxpat
+1549504007|michaelpalumbo|D|/Synthia/sugarSynth/sugarSynth.maxpat
+1549504007|michaelpalumbo|D|/Synthia/sugarSynth/x_sugar~.maxpat
+1549504007|michaelpalumbo|A|/Synthia/x_sugar~.maxpat
+1549504277|michaelpalumbo|M|/Synthia/Main.maxpat
+1549504277|michaelpalumbo|A|/Synthia/freeverb~.mxo/Contents/Info.plist
+1549504277|michaelpalumbo|A|/Synthia/freeverb~.mxo/Contents/MacOS/freeverb~
+1549505437|michaelpalumbo|M|/Synthia/Main.maxpat
+1549505437|michaelpalumbo|M|/Synthia/sugarSynth.maxpat
+1549507827|michaelpalumbo|M|/Synthia/sugarSynth.maxpat
+1549508600|michaelpalumbo|M|/Synthia/sugarSynth.maxpat
+1549514257|michaelpalumbo|M|/Synthia/sugarSynth.maxpat
+1549516962|michaelpalumbo|M|/Synthia/Main.maxpat
+1549516962|michaelpalumbo|M|/Synthia/sugarSynth.maxpat
+1549516962|michaelpalumbo|M|/Synthia/x_sugar~.maxpat
+1549517276|michaelpalumbo|M|/Synthia/sugarSynth.maxpat
+1549519953|michaelpalumbo|M|/Synthia/Main.maxpat
+1549519953|michaelpalumbo|A|/Synthia/Shimmer.wav
+1549519953|michaelpalumbo|M|/Synthia/sugarSynth.maxpat
+1549519953|michaelpalumbo|M|/Synthia/x_sugar~.maxpat
+1549521226|michaelpalumbo|M|/README.md
+1549521226|michaelpalumbo|A|/Synthia/Fuzz E Bass.wav
+1549521226|michaelpalumbo|M|/Synthia/Main.maxpat
+1549521226|michaelpalumbo|D|/Synthia/Shimmer.wav
+1549521226|michaelpalumbo|M|/Synthia/sugarSynth.maxpat
+1549522046|michaelpalumbo|A|/Stevia Buscemi.aif
+1549522153|Michael Palumbo|M|/README.md
+1549522245|Michael Palumbo|M|/README.md
+1549522263|Michael Palumbo|M|/README.md
+1549522589|michaelpalumbo|M|/README.md
