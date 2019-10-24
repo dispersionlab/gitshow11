@@ -193,27 +193,27 @@
       "params": [
         {
           "id": 0,
-          "value": 0.592999279
+          "value": 0.648999333
         },
         {
           "id": 1,
-          "value": 0.5
+          "value": 0.0
         },
         {
           "id": 2,
-          "value": 0.5
+          "value": 0.0
         },
         {
           "id": 3,
-          "value": 0.5
+          "value": 0.0
         },
         {
           "id": 4,
-          "value": 0.5
+          "value": 0.0
         },
         {
           "id": 5,
-          "value": 0.5
+          "value": 0.0
         },
         {
           "id": 6,
@@ -242,8 +242,8 @@
       ],
       "rightModuleId": 4,
       "data": {
-        "path": "/Users/mp/gitShow1/vco.js",
-        "script": "// Voltage-controlled oscillator example\n// by Andrew Belt\n\n// JavaScript isn't ideal for audio generating and processing due to it being 10-100 less efficient than C++, but it's still an easy way to learn simple DSP.\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\nvar phase2 = 0\nfunction process(block) {\n\t// Knob ranges from -5 to 5 octaves\n\tvar pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n\tpitch += block.inputs[0][0]\t\t\n\n\t// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.\n\t// Default frequency is middle C (C4) in Hz.\n\t// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies\n\tvar freq = 261.6256 * Math.pow(2, pitch)\n\n\tdisplay(\"Freq: \" + freq.toFixed(3) + \" Hz\")\n\n\t// Set all samples in output buffer\n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n\t\tphase %= 1\n\t\t// Convert phase to sine output\n\t\tblock.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5\n\t\tblock.outputs[1][i] = Math.sin(2 * Math.PI * phase) * 5\n\t}\n\n\n\n}\n"
+        "path": "/Users/mp/gitShow1/module1.js",
+        "script": "// Voltage-controlled oscillator example\n// by Andrew Belt\n\n// JavaScript isn't ideal for audio generating and processing due to it being 10-100 less efficient than C++, but it's still an easy way to learn simple DSP.\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\nvar phase2 = 0\nfunction process(block) {\n \n\t// Knob ranges from -5 to 5 octaves\n\tvar pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n\tpitch += block.inputs[0][0]\t\t\n\n\t// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.\n\t// Default frequency is middle C (C4) in Hz.\n\t// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies\n\tvar freq = 261.6256 * Math.pow(2, pitch)\n\n\t\n\tdisplay(\"VCO: \" + freq + \"Hz\")\n\t// Set all samples in output buffer\n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n\t\tphase %= 1\n\t\t// Convert phase to sine output\n\t\tblock.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5\n\t\tblock.outputs[1][i] = Math.sin(2 * Math.PI * phase) * 5\n\t}\n\n\n\n}\n"
       },
       "pos": [
         0,
@@ -354,7 +354,7 @@
       "leftModuleId": 23,
       "data": {
         "format": "wav",
-        "path": "",
+        "path": "/Users/mp/gitShow1/test.wav",
         "incrementPath": true,
         "sampleRate": 44100,
         "depth": 16,
@@ -375,6 +375,54 @@
       "text": "recording! this little module simplifies things so we don't have to use jack+daw\n\nremember to save the recording to the git repo, but don't let it be larger than 20MB~",
       "pos": [
         58,
+        1
+      ]
+    },
+    {
+      "id": 24,
+      "plugin": "Fundamental",
+      "version": "1.2.1",
+      "model": "Scope",
+      "params": [
+        {
+          "id": 0,
+          "value": 0.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": 0.0
+        },
+        {
+          "id": 3,
+          "value": 0.0
+        },
+        {
+          "id": 4,
+          "value": 14.0
+        },
+        {
+          "id": 5,
+          "value": 0.0
+        },
+        {
+          "id": 6,
+          "value": 0.0
+        },
+        {
+          "id": 7,
+          "value": 0.0
+        }
+      ],
+      "data": {
+        "lissajous": 0,
+        "external": 0
+      },
+      "pos": [
+        0,
         1
       ]
     }
@@ -453,14 +501,6 @@
       "color": "#0986ad"
     },
     {
-      "id": 299,
-      "outputModuleId": 21,
-      "outputId": 0,
-      "inputModuleId": 17,
-      "inputId": 0,
-      "color": "#c91847"
-    },
-    {
       "id": 301,
       "outputModuleId": 4,
       "outputId": 1,
@@ -491,6 +531,14 @@
       "inputModuleId": 22,
       "inputId": 2,
       "color": "#0c8e15"
+    },
+    {
+      "id": 304,
+      "outputModuleId": 17,
+      "outputId": 0,
+      "inputModuleId": 24,
+      "inputId": 0,
+      "color": "#c91847"
     }
   ]
 }

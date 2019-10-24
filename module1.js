@@ -9,6 +9,7 @@ config.bufferSize = 16
 var phase = 0
 var phase2 = 0
 function process(block) {
+ 
 	// Knob ranges from -5 to 5 octaves
 	var pitch = block.knobs[0] * 10 - 5
 	// Input follows 1V/oct standard
@@ -19,8 +20,8 @@ function process(block) {
 	// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies
 	var freq = 261.6256 * Math.pow(2, pitch)
 
-	display("Freq: " + freq.toFixed(3) + " Hz")
-
+	
+	display("VCO: " + freq + "Hz")
 	// Set all samples in output buffer
 	var deltaPhase = config.frameDivider * block.sampleTime * freq
 	for (var i = 0; i < block.bufferSize; i++) {

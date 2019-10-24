@@ -10,10 +10,12 @@ Gitshow runs sessions twice per month, and each session lasts ~2 weeks. You are 
 1. Clone/pull your assigned repository.
 
 	A repo will contain at least one of the each of the following:
-	- a score (score.md)
-	- a module (module.js)
-	- a modular patch (patch.vcv)
-	- a recording (recording.wav). 
+	- a score (score#.md)
+	- a module (module#.js)
+	- a modular patch (patch#.vcv)
+	- a recording (recording#.wav). 
+	
+	\# corresponds to the gitshow repo number, i.e. gitshow3 should have recording3.wav
 
 2. Your first engagement should be with the score, so open it with a markdown editor (see recommended tools) so you can view the content. It might request you to listen to the recording and/or play the patch file in a certain way. 
 
@@ -27,7 +29,7 @@ Gitshow runs sessions twice per month, and each session lasts ~2 weeks. You are 
 
 7. Record your patch and save it as recording.wav. This recording could be entirely generative output, or an improvisation, or a performance of your score. 
 
-8. IMPORTANT: please *do not* rename the files in the repo (keep score.md, module.js, patch.vcv, recording.wav). If a save dialog asks if you want to overwite a file, click yes. With this in mind, its a good habit to commit changes to repo frequently.  
+8. IMPORTANT: please *do not* rename the files in the repo (keep score#.md, module#.js, patch#.vcv, recording#.wav). If a save dialog asks if you want to overwite a file, click yes. With this in mind, its a good habit to commit changes to repo frequently.  
 
 9. When you're done, make your last commit, and then tag your commit with your session number and a short description:
 
@@ -58,4 +60,5 @@ Shortly after this date, I'll reassign the repositories for the next session.
 2. For editing/viewing the score in markdown: [MacDown (OSX)](https://macdown.uranusjr.com/), [Typora (Linux, Windows)](https://alternativeto.net/software/typora/)
 
 ## git commands
+coming soon.
 
