@@ -18,7 +18,7 @@ function process(block) {
 	// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.
 	// Default frequency is middle C (C4) in Hz.
 	// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies
-	var freq = 261.6256 * Math.pow(2, pitch)
+	var freq = 111.6256 * Math.pow(2, pitch)
 
 	
 	display("VCO: " + freq + "Hz")
