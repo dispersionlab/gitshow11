@@ -6,12 +6,10 @@
 config.frameDivider = 1
 config.bufferSize = 1
 
-let tape = []
 
 var phase = 0
-var phase2 = 0
 function process(block) {
-	// tape.length = 44100
+	
 	// Knob ranges from -5 to 5 octaves
 	var pitch = block.knobs[0] * 10 - 5
 	// Input follows 1V/oct standard
@@ -19,17 +17,15 @@ function process(block) {
 	// amp = block.inputs[1][0]
 	// tape.push
 	// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.
-	// Default frequency is middle C (C4) in Hz.
-	// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies
-	var freq = 111.6256 * Math.pow(2, pitch)
 
-	bufSizeKnob = Math.round(block.knobs[1] * 1024)
+	// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies
+	var freq = 111.6256
+	freq += freq * Math.pow(2, pitch)
+	bufSizeKnob = Math.round(block.knobs[1] * 120)
 	block.bufferSize += bufSizeKnob
 	
 	frameDivKnob = Math.round(block.knobs[2] * 32)
 	frameDivider = config.frameDivider + frameDivKnob
-
-	
 
 	if (block.inputs[1][0] === 0){
 
@@ -41,19 +37,19 @@ function process(block) {
 
 	} else {
 		frameDivider = frameDivider + Math.round(block.inputs[2][0] * 4)
-
 	}
 
 	block.sampleTime += block.knobs[3] * 10
 
-	if (block.inputs[3][0] === 0){
-
-	} else {
+	if (block.inputs[3][0] !== 0){
 		block.sampleTime = block.sampleTime + (block.inputs[3][0] / 22050)
 
+		if (block.inputs[4][0] !== 0){
+			block.sampleTime += block.inputs[4][0] / 100
+		}
 	}
 
-	display(block.sampleTime)
+	display(freq + ' ' + pitch)
 
 
 	// Set all samples in output buffer
