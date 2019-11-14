@@ -9,7 +9,7 @@ luigi, the world's second most famous coin block basher,
 journey's inward
 > low--->high---->low
 
-following the onset of chronic traumatic encephalopathy. 
+following the onset of chronic traumatic encephalopathy. *contemplates retirement*
 
 > > > rough----------->rough-------nostalgia<---------->rough
 

@@ -36,11 +36,11 @@
         },
         {
           "id": 1,
-          "value": 0.984292746
+          "value": 0.00424264045
         },
         {
           "id": 2,
-          "value": 1.0
+          "value": 0.00141329411
         },
         {
           "id": 3,
@@ -193,11 +193,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.168000028
+          "value": 0.382500082
         },
         {
           "id": 1,
-          "value": 0.0150000108
+          "value": 0.12000002
         },
         {
           "id": 2,
@@ -244,7 +244,7 @@
       "rightModuleId": 4,
       "data": {
         "path": "/Users/mp/_gitshows/gitShow1/module1.js",
-        "script": "// Voltage-controlled oscillator example\n// by Andrew Belt\n\n// JavaScript isn't ideal for audio generating and processing due to it being 10-100 less efficient than C++, but it's still an easy way to learn simple DSP.\n\nconfig.frameDivider = 1\nconfig.bufferSize = 1\n\n\nvar phase = 0\nfunction process(block) {\n\t\n\t// Knob ranges from -5 to 5 octaves\n\tvar pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n\tpitch += block.inputs[0][0]\t\t\n\t// amp = block.inputs[1][0]\n\t// tape.push\n\t// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.\n\n\t// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies\n\tvar freq = 111.6256\n\tfreq += freq * Math.pow(2, pitch)\n\tbufSizeKnob = Math.round(block.knobs[1] * 120)\n\tblock.bufferSize += bufSizeKnob\n\t\n\tframeDivKnob = Math.round(block.knobs[2] * 32)\n\tframeDivider = config.frameDivider + frameDivKnob\n\n\tif (block.inputs[1][0] === 0){\n\n\t} else {\n\t\tblock.bufferSize = block.inputs[1][0] + bufSizeKnob\n\t}\n\t\n\tif (block.inputs[2][0] === 0){\n\n\t} else {\n\t\tframeDivider = frameDivider + Math.round(block.inputs[2][0] * 4)\n\t}\n\n\tblock.sampleTime += block.knobs[3] * 10\n\n\tif (block.inputs[3][0] !== 0){\n\t\tblock.sampleTime = block.sampleTime + (block.inputs[3][0] / 22050)\n\n\t\tif (block.inputs[4][0] !== 0){\n\t\t\tblock.sampleTime += block.inputs[4][0] / 100\n\t\t}\n\t}\n\n\tdisplay(freq + ' ' + pitch)\n\n\n\t// Set all samples in output buffer\n\tvar deltaPhase = frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n\t\tphase %= 1\n\t\t// Convert phase to sine output\n\t\tblock.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5\n\t\t// tape[i] = (block.inputs[0][i])\n\t\t// block.outputs[1][i] = tape[tap1]\n\n\t}\n\n\n\n}\n"
+        "script": "\t// knobs 0-5 in code correspond to knobs 1-6 on the prototype faceplate\n\t// inputs 0-5 in code correspond to inputs 1-6 on the prototype faceplate\n\t// outputs 0-5 in code correspond to outputs 1-6 on the prototype faceplate\n\nconfig.frameDivider = 1\nconfig.bufferSize = 1\n\nvar phase = 0\nfunction process(block) {\n\t// set pitch  according to knob 0\n\t// Knob ranges from -5 to 5 octaves\n\tvar pitch = block.knobs[0] * 10 - 5\n\t// modulate pitch using input 0 as cv\n\t// Input follows 1V/oct standard\n\tpitch += block.inputs[0][0]\t\t\n\n\t// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.\n\n\t// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies\n\tvar freq = 111.6256\n\tfreq += freq * Math.pow(2, pitch)\n\n\t// manipulate the buffer size of the this module\n\tbufSizeKnob = Math.round(block.knobs[1] * 120)\n\tblock.bufferSize += bufSizeKnob\n\tif (block.inputs[1][0] === 0){\n\t\t// ignore input, use only knob value\n\t} else {\n\t\t// modulate the bufferSize by the sum of input 1 and knob 1\n\t\tblock.bufferSize = block.inputs[1][0] + bufSizeKnob\n\t}\n\n\t// manipulate the frame division\n\tframeDivKnob = Math.round(block.knobs[2] * 32)\n\tframeDivider = config.frameDivider + frameDivKnob\n\n\tif (block.inputs[2][0] === 0){\n\t\t// ignore input 2, use only knob  value\n\t} else {\n\t\t// modulate the frameDivision by the sum of input 2 and knob 2\n\t\tframeDivider = frameDivider + Math.round(block.inputs[2][0] * 4)\n\t}\n\n\t// I *think* block.sampleTime corresponds to the sample-length? anyway, manipulating this results in some satisfying glitch\n\tblock.sampleTime += block.knobs[3] * 10\n\n\tif (block.inputs[3][0] !== 0){\n\t\t// ignore cv input, use only knob 3 value\n\t} else {\n\t\t// modulate sampleTime by adding input 3 as cv\n\t\tblock.sampleTime = block.sampleTime + (block.inputs[3][0] / 22050)\n\n\t\tif (block.inputs[4][0] !== 0){\n\t\t\t// if a cable is connected to input 4, add that value to sampleTime\n\t\t\tblock.sampleTime += block.inputs[4][0] / 100\n\t\t}\n\t}\n\n\t// Set all samples in output buffer\n\tvar deltaPhase = frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n\t\tphase %= 1\n\t\t// Convert phase to sine output\n\t\tblock.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5\n\t}\n}\n"
       },
       "pos": [
         20,
@@ -400,7 +400,7 @@
         },
         {
           "id": 2,
-          "value": -8.0
+          "value": -1.49299872
         },
         {
           "id": 3,
@@ -719,14 +719,6 @@
       "color": "#c9b70e"
     },
     {
-      "id": 338,
-      "outputModuleId": 2,
-      "outputId": 2,
-      "inputModuleId": 1,
-      "inputId": 1,
-      "color": "#0c8e15"
-    },
-    {
       "id": 343,
       "outputModuleId": 2,
       "outputId": 1,
@@ -815,6 +807,14 @@
       "color": "#c9b70e"
     },
     {
+      "id": 375,
+      "outputModuleId": 26,
+      "outputId": 0,
+      "inputModuleId": 17,
+      "inputId": 1,
+      "color": "#c9b70e"
+    },
+    {
       "id": 368,
       "outputModuleId": 26,
       "outputId": 2,
@@ -823,12 +823,12 @@
       "color": "#0c8e15"
     },
     {
-      "id": 375,
-      "outputModuleId": 26,
-      "outputId": 0,
-      "inputModuleId": 17,
+      "id": 338,
+      "outputModuleId": 2,
+      "outputId": 2,
+      "inputModuleId": 1,
       "inputId": 1,
-      "color": "#c9b70e"
+      "color": "#0c8e15"
     }
   ]
 }

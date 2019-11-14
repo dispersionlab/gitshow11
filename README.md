@@ -2,7 +2,7 @@
 
 I highly recommend you open this README.md file a markdown editor so you can see the formatted content (images, etc). 
 ## Recommended tools
-1. For editing/viewing the score in markdown: [MacDown (OSX)](https://macdown.uranusjr.com/), [Typora (Linux, Windows)](https://alternativeto.net/software/typora/)
+1. For viewing the readme & the score in markdown: [MacDown (OSX)](https://macdown.uranusjr.com/), [Typora (Linux, Windows)](https://alternativeto.net/software/typora/)
 2. For editing javascript: Visual Studio Code Insiders [https://code.visualstudio.com/insiders/](https://code.visualstudio.com/insiders/) (It includes an integrated terminal, which is handy for committing changes to git). 
 
 
@@ -23,6 +23,33 @@ We've tested these instructions to take about 1 hour to follow for the first tim
 
 ## the gitshow process
 Gitshow runs sessions twice per month, and each session lasts ~2 weeks. You are assigned a different repository at the start of a new session. 
+
+#### Play with the past...
+Using git you can access or edit previous versions of other people's contributions to the repo. Even something as simple as viewing the commit history lets you get some understanding of what another creator was thinking when they stored a new change to a file. Run this in a terminal window:
+
+```shell
+git log --name-status
+```
+You'll see something like this (with different data):
+> commit a4c1e970ef67d71094315444e6b2aa835dd3b69c
+> Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+> Date:   Thu Nov 14 09:57:10 2019 -0500
+> 
+>     wave shaper can now control the buffer size
+> 
+> M   module1.js
+> 
+> commit ae2c89248e869de5f6f73768537e5641b080cb20
+> Author: michaelpalumbo <emailmichaelpalumbo@gmail.com>
+> Date:   Thu Nov 14 09:52:00 2019 -0500
+> 
+>     i'm trying to make a vari-delay by writing input values to an array. but after playing with the buffersize I realized i could make a waveshaper or some kind of crusher
+> 
+> M   README.md
+> M   module1.js
+
+#### ....and play with the future!
+What you say about your changes (and how often you commit them) helps participants in subsequent sessions to understand your process. It also foregrounds your rough drafts and as-yet unfinished ideas, so that they might be taken up as inspiration by someone else. We'll touch on how to commit changes in section 3.4. And I'll add more info on how to work with git in depth later this week. 
 
 #### activity during a gitshow session (~2 weeks)
 
@@ -45,9 +72,14 @@ Gitshow runs sessions twice per month, and each session lasts ~2 weeks. You are 
 	
 	3. Once the prototype module is pointed at the correct path to module#.js on your filesystem, when you save changes to the code, vcv rack will reload it in the patch, so you should hear results right away. I recommend using a scope module to view your signal(s). 
 	
-	4. Please remember to commit changes you make to the git repository (code, score, recording, patch). It's a good habit to do it early and often, not just when you're done. 
+	4. Please remember to **commit changes you make to the git repository (code, score, recording, patch)**. Early and often. It's a good idea to keep a terminal window open while you work:
+	
+		```shell
+		git add .
+		git commit -m "describe what you changed. or describe what you're trying to do but isn't working."
+	 
 
-4. You can modify the patch around the module: connect/disconnect cables, add modules available in the vcv plugin browser (right-click the dark-grey background of VCV Rack), or remove modules. 
+4. You can modify the patch around the module: connect/disconnect cables, add modules available in the vcv plugin browser (right-click the dark-grey background of VCV Rack), or remove modules. Remember to save and then 
 	
 5. Edit a new version of the score, making *any* changes you want. For the score, consider that a markdown file can embed images, tables etc. See the file markdown_examples.md for help with markdown. 
 
@@ -94,6 +126,27 @@ Shortly after this date, I'll reassign the repositories for the next session.
 
 
 ## git commands
-coming soon.
+work in progress. coming soon.
+
+We use a tagging system to keep track of significant commits, typically those made at the end of each session. To view the tags made thus far, run:
+
+```shell
+git tag
+```
+> palumboStarship:gitshow1 mp$ git tag
+> 
+> 1
+> 
+> 2.2
+> 
+> cycle1
+> 
+> cycle2
+> 
+
+#### comparing versions (todo)
+Using a tool like mergely.com you can even compare two versions and easily merge lines from an old version into one of yours. 
+
+
 
 	
