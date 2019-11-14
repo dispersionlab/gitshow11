@@ -64,24 +64,24 @@ Gitshow runs sessions twice per month, and each session lasts ~2 weeks. You are 
 
 8. You can repeat steps 3-7 in any order as you see fit, just remember to commit changes to the git repo as often as you can. 
 
-9. When you're done, make your last commit, and then tag your commit with your session number and a short description:
+9. When you're done, make your last commit, and then tag your commit with your the phase and session number, and a short description:
 
 	1. Commands:
-
+	
 		```shell
 		git add .
 		git commit -m "commit message"
-		git tag -a sessionNumber -m "short description"
+		git tag -a 2.sessionNumber -m "short description"
 		```
-	
+	**Always prefix your tag with 2. as that is the phase of the research project and helps Michael keep things organized, thanks!**
 	If you need to add any changes after tagging:
 	
 	1. Make the changes, save them
 	2. Add and commit them
-	3. Tag the last commit, but add a '.' followed by a revision number to. the tag:
+	3. Tag the last commit, but add a '.' followed by a revision number to the tag:
 
 		```shell
-		git tag -a sessionNumber.revisionNumber -m "short description"
+		git tag -a 2.sessionNumber.revisionNumber -m "short description"
 
 10. Push your changes to GitHub. 
 
