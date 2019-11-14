@@ -12,7 +12,7 @@
       "data": {
         "audio": {
           "driver": 5,
-          "deviceName": "Apple Inc.: MacBook Pro Speakers",
+          "deviceName": "Apple Inc.: Built-in Output",
           "offset": 0,
           "maxChannels": 8,
           "sampleRate": 44100,
@@ -27,7 +27,7 @@
     {
       "id": 2,
       "plugin": "Fundamental",
-      "version": "1.3.1",
+      "version": "1.2.1",
       "model": "VCMixer",
       "params": [
         {
@@ -36,7 +36,7 @@
         },
         {
           "id": 1,
-          "value": 1.05091155
+          "value": 0.984292746
         },
         {
           "id": 2,
@@ -61,7 +61,7 @@
     {
       "id": 4,
       "plugin": "Fundamental",
-      "version": "1.3.1",
+      "version": "1.2.1",
       "model": "VCF",
       "params": [
         {
@@ -95,7 +95,7 @@
     {
       "id": 6,
       "plugin": "Fundamental",
-      "version": "1.3.1",
+      "version": "1.2.1",
       "model": "ADSR",
       "params": [
         {
@@ -125,7 +125,7 @@
     {
       "id": 7,
       "plugin": "Fundamental",
-      "version": "1.3.1",
+      "version": "1.2.1",
       "model": "Scope",
       "params": [
         {
@@ -193,23 +193,23 @@
       "params": [
         {
           "id": 0,
-          "value": 0.118499987
+          "value": 0.0
         },
         {
           "id": 1,
-          "value": 0.514500558
+          "value": 0.0
         },
         {
           "id": 2,
-          "value": 0.985500097
+          "value": 0.0
         },
         {
           "id": 3,
-          "value": 0.841000021
+          "value": 0.0
         },
         {
           "id": 4,
-          "value": 0.972000003
+          "value": 0.0
         },
         {
           "id": 5,
@@ -242,8 +242,8 @@
       ],
       "rightModuleId": 4,
       "data": {
-        "path": "/Users/mp/gitShow1/module1.js",
-        "script": "// Voltage-controlled oscillator example\n// by Andrew Belt\n\n// JavaScript isn't ideal for audio generating and processing due to it being 10-100 less efficient than C++, but it's still an easy way to learn simple DSP.\n\nconfig.frameDivider = 1\nconfig.bufferSize = 16\n\nvar phase = 0\nvar phase2 = 0\nfunction process(block) {\n \n\t// Knob ranges from -5 to 5 octaves\n\tvar pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n\tpitch += block.inputs[0][0]\t\t\n\n\t// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.\n\t// Default frequency is middle C (C4) in Hz.\n\t// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies\n\tvar freq = 261.6256 * Math.pow(2, pitch)\n\n\t\n\tdisplay(\"VCO: \" + freq + \"Hz\")\n\t// Set all samples in output buffer\n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n\t\tphase %= 1\n\t\t// Convert phase to sine output\n\t\tblock.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5\n\t\tblock.outputs[1][i] = Math.sin(2 * Math.PI * phase) * 5\n\t}\n\n\n\n}\n"
+        "path": "/Users/mp/_gitshows/gitShow1/module1.js",
+        "script": "// Voltage-controlled oscillator example\n// by Andrew Belt\n\n// JavaScript isn't ideal for audio generating and processing due to it being 10-100 less efficient than C++, but it's still an easy way to learn simple DSP.\n\nconfig.frameDivider = 1\nconfig.bufferSize = 1\n\nlet tape = []\n\nvar phase = 0\nvar phase2 = 0\nfunction process(block) {\n\t// tape.length = 44100\n\t// Knob ranges from -5 to 5 octaves\n\tvar pitch = block.knobs[0] * 10 - 5\n\t// Input follows 1V/oct standard\n\tpitch += block.inputs[0][0]\t\t\n\t// amp = block.inputs[1][0]\n\t// tape.push\n\t// The relationship between 1V/oct pitch and frequency is `freq = 2^pitch`.\n\t// Default frequency is middle C (C4) in Hz.\n\t// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies\n\tvar freq = 111.6256 * Math.pow(2, pitch)\n\n\tbufSizeKnob = Math.round(block.knobs[1] * 1024)\n\tblock.bufferSize += bufSizeKnob\n\t\n\tdisplay(block.inputs[1][0])\n\n\tif (block.inputs[1][0] === 0){\n\n\t} else {\n\t\tblock.bufferSize = block.inputs[1][0] + bufSizeKnob\n\t}\n\t\n\t// Set all samples in output buffer\n\tvar deltaPhase = config.frameDivider * block.sampleTime * freq\n\tfor (var i = 0; i < block.bufferSize; i++) {\n\t\t// Accumulate phase\n\t\tphase += deltaPhase\n\t\t// Wrap phase around range [0, 1]\n\t\tphase %= 1\n\t\t// Convert phase to sine output\n\t\tblock.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5\n\t\t// tape[i] = (block.inputs[0][i])\n\t\t// block.outputs[1][i] = tape[tap1]\n\n\t}\n\n\n\n}\n"
       },
       "pos": [
         0,
@@ -253,7 +253,7 @@
     {
       "id": 18,
       "plugin": "Fundamental",
-      "version": "1.3.1",
+      "version": "1.2.1",
       "model": "LFO",
       "params": [
         {
@@ -266,7 +266,7 @@
         },
         {
           "id": 2,
-          "value": 3.40300274
+          "value": 1.62100196
         },
         {
           "id": 3,
@@ -295,7 +295,7 @@
     {
       "id": 21,
       "plugin": "Fundamental",
-      "version": "1.3.1",
+      "version": "1.2.1",
       "model": "8vert",
       "params": [
         {
@@ -332,7 +332,7 @@
         }
       ],
       "pos": [
-        15,
+        30,
         1
       ]
     },
@@ -381,7 +381,7 @@
     {
       "id": 24,
       "plugin": "Fundamental",
-      "version": "1.3.1",
+      "version": "1.2.1",
       "model": "Scope",
       "params": [
         {
@@ -425,25 +425,49 @@
         0,
         1
       ]
+    },
+    {
+      "id": 26,
+      "plugin": "Fundamental",
+      "version": "1.2.1",
+      "model": "LFO",
+      "params": [
+        {
+          "id": 0,
+          "value": 1.0
+        },
+        {
+          "id": 1,
+          "value": 0.0
+        },
+        {
+          "id": 2,
+          "value": -3.26599693
+        },
+        {
+          "id": 3,
+          "value": 0.712500036
+        },
+        {
+          "id": 4,
+          "value": 0.657000005
+        },
+        {
+          "id": 5,
+          "value": 0.5
+        },
+        {
+          "id": 6,
+          "value": 0.64650017
+        }
+      ],
+      "pos": [
+        16,
+        1
+      ]
     }
   ],
   "cables": [
-    {
-      "id": 281,
-      "outputModuleId": 2,
-      "outputId": 0,
-      "inputModuleId": 1,
-      "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
-      "id": 282,
-      "outputModuleId": 2,
-      "outputId": 0,
-      "inputModuleId": 1,
-      "inputId": 1,
-      "color": "#c9b70e"
-    },
     {
       "id": 285,
       "outputModuleId": 6,
@@ -483,14 +507,6 @@
       "inputModuleId": 4,
       "inputId": 0,
       "color": "#0986ad"
-    },
-    {
-      "id": 297,
-      "outputModuleId": 2,
-      "outputId": 1,
-      "inputModuleId": 7,
-      "inputId": 0,
-      "color": "#c9b70e"
     },
     {
       "id": 296,
@@ -541,34 +557,42 @@
       "color": "#c91847"
     },
     {
-      "id": 305,
-      "outputModuleId": 17,
-      "outputId": 1,
-      "inputModuleId": 6,
-      "inputId": 0,
-      "color": "#c91847"
-    },
-    {
-      "id": 306,
-      "outputModuleId": 17,
+      "id": 312,
+      "outputModuleId": 18,
       "outputId": 2,
-      "inputModuleId": 6,
-      "inputId": 1,
+      "inputModuleId": 17,
+      "inputId": 0,
       "color": "#0986ad"
     },
     {
-      "id": 307,
-      "outputModuleId": 17,
-      "outputId": 3,
-      "inputModuleId": 6,
-      "inputId": 3,
+      "id": 317,
+      "outputModuleId": 2,
+      "outputId": 1,
+      "inputModuleId": 7,
+      "inputId": 0,
       "color": "#0c8e15"
     },
     {
-      "id": 310,
-      "outputModuleId": 17,
-      "outputId": 4,
-      "inputModuleId": 18,
+      "id": 318,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#0986ad"
+    },
+    {
+      "id": 319,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 1,
+      "color": "#0c8e15"
+    },
+    {
+      "id": 322,
+      "outputModuleId": 26,
+      "outputId": 2,
+      "inputModuleId": 17,
       "inputId": 1,
       "color": "#c9b70e"
     }
