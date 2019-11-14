@@ -23,8 +23,16 @@ function process(block) {
 	// https://vcvrack.com/manual/VoltageStandards.html#pitch-and-frequencies
 	var freq = 111.6256 * Math.pow(2, pitch)
 
-	// crush = 
-	block.bufferSize += Math.round(block.knobs[1] * 1024)
+	bufSizeKnob = Math.round(block.knobs[1] * 1024)
+	block.bufferSize += bufSizeKnob
+	
+	display(block.inputs[1][0])
+
+	if (block.inputs[1][0] === 0){
+
+	} else {
+		block.bufferSize = block.inputs[1][0] + bufSizeKnob
+	}
 	
 	// Set all samples in output buffer
 	var deltaPhase = config.frameDivider * block.sampleTime * freq
@@ -37,7 +45,6 @@ function process(block) {
 		block.outputs[0][i] = Math.sin(2 * Math.PI * phase) * 5
 		// tape[i] = (block.inputs[0][i])
 		// block.outputs[1][i] = tape[tap1]
-		display(block.bufferSize)
 
 	}
 
