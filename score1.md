@@ -1,14 +1,15 @@
 # score 1
 
+> > > noise-->tone<---ping> 
 
+luigi, the world's second most famous coin block basher, 
 
-tone --->noise----------------------->tone
+> .
 
-density
-low--->high---->low
+journey's inward
+> low--->high---->low
 
+following the onset of chronic traumatic encephalopathy. 
 
-smooth----------->rough----------------->smooth
+> > > rough----------->rough-------nostalgia<---------->rough
 
-
-pulses---->sustained tone---->pulses
