@@ -26,7 +26,10 @@ function process(block) {
 	bufSizeKnob = Math.round(block.knobs[1] * 1024)
 	block.bufferSize += bufSizeKnob
 	
-	display(block.inputs[1][0])
+	frameDivKnob = Math.round(block.knobs[2] * 32)
+	frameDivider = config.frameDivider + frameDivKnob
+
+	
 
 	if (block.inputs[1][0] === 0){
 
@@ -34,8 +37,27 @@ function process(block) {
 		block.bufferSize = block.inputs[1][0] + bufSizeKnob
 	}
 	
+	if (block.inputs[2][0] === 0){
+
+	} else {
+		frameDivider = frameDivider + Math.round(block.inputs[2][0] * 4)
+
+	}
+
+	block.sampleTime += block.knobs[3] * 10
+
+	if (block.inputs[3][0] === 0){
+
+	} else {
+		block.sampleTime = block.sampleTime + (block.inputs[3][0] / 22050)
+
+	}
+
+	display(block.sampleTime)
+
+
 	// Set all samples in output buffer
-	var deltaPhase = config.frameDivider * block.sampleTime * freq
+	var deltaPhase = frameDivider * block.sampleTime * freq
 	for (var i = 0; i < block.bufferSize; i++) {
 		// Accumulate phase
 		phase += deltaPhase
