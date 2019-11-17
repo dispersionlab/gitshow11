@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Git Show</title>
+
+		<script src="./bower_components/jquery/dist/jquery.min.js">	</script>
+    <!-- <script src="./bower_components/Repo.js/repo.js"></script> -->
+    <!-- <script src="./bower_components/jquery-github/dist/jquery.github.js"></script> -->
+    <!-- <link rel="stylesheet" href="./bower_components/jquery-github/assets/base.css"> -->
+    <!-- michael's customization of jquery-git for use with gitshow -->
+    <script src="https://raw.githubusercontent.com/michaelpalumbo/jquery-git/develop/jquery-git.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Base64/1.0.2/base64.js"></script>
+    <!-- convert score.md to html -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  </head>
+
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    th, td {  
+      padding: 15px;
+        text-align: left;
+        vertical-align:top;
+    }
+    /* td{ height: 50px }; */
+    td > div { overflow-y:auto; overflow-x:auto;} 
+  
+  </style>
+  <body>
+    <p>
+        GitShow is a distributed, pro-hacking and open-source electronic music composition and instrument design experiment under development and direction by Michael Palumbo and Dr. Doug Van Nort of the Dispersion Lab.
+        <br>
+        <br>
+        <h2>Ongoing open call for participation:</h2>
+        Git show runs in bi-weekly sessions. To join, follow the very short instructions at this link: <a href="https://github.com/dispersionlab/gitshow/issues/6" target="_blank">New Participants</a>
+        <br>
+        <br>
+      
+      </p>
+    <table width="100%">
+      <tr>
+        <th width="60%">Gitshow Repository #1</th>
+        <th width="30%">Version History</th>
+        <!-- TODO: FIGURE OUT HOW TO LINK TO THE TAGGED COMMITS, AND LINK THEM HERE -->
+        <!-- <th width="40%">Version History</th>  -->
+      </tr> 
+      <tr >
+        <td>
+            <!-- <div data-repo="dispersionlab/gitshow1"></div> -->
+            <h3>Score</h3>
+            <div id="score1"></div>
+
+            <h3>Recording</h3>
+            <br>
+            waveplayer (todo)
+
+            <br>
+            vcv patch in-browser (todo)
+
+
+            <br>
+            js code (using codemirror?)
+
+
+            <!-- <br>Click a filename to view it, then click the repository title below to return to the root.  
+            <div id="gitshow1" style="overflow-x:auto;"></div> -->
+
+            
+
+
+
+        </td>
+
+        <!-- <td>
+          <div id="details1"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <div data-repo="dispersionlab/gitshow2"></div>
+            <div id="gitshow2"></div>
+        </td>
+        <td>
+            <div id="details1"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <div data-repo="dispersionlab/gitshow3"></div>
+            <div id="gitshow3"></div>
+        </td>
+        <td>
+            <div id="details3"></div>
+          </td>
+      </tr>
+      <tr>
+        <td>
+            <div data-repo="dispersionlab/gitshow4"></div>
+            <div id="gitshow4"></div>
+        </td>
+        <td>
+            <div id="details4"></div>
+          </td>
+      </tr>
+      <tr>
+        <td>
+            <div data-repo="dispersionlab/gitshow5"></div>
+            <div id="gitshow5"></div>
+        </td>
+        <td>
+            <div id="details5"></div>
+          </td> -->
+      <!-- </tr> -->
+      
+
+
+
+    </table>
+    <!-- <p><a href="https://github.com/dispersionlab/gitshow1" target="_blank">Git Show 1</a></p>
+    
+    <p><a href="https://github.com/dispersionlab/gitshow2" target="_blank">Git Show 2</a></p>
+    <p><a href="https://github.com/dispersionlab/gitshow3" target="_blank">Git Show 3</a></p>
+    <p><a href="https://github.com/dispersionlab/gitshow4" target="_blank">Git Show 4</a></p>
+    <p><a href="https://github.com/dispersionlab/gitshow5" target="_blank">Git Show 5</a></p> -->
+  </body>
+
+  <script>
+  window.onload = function repoContents(){
+
+    // $("[data-repo]").github();
+//     $().git({
+//     username: 'dispersionlab'
+// });
+
+
+  }
+  
+  // Specify a reference element, it doesn't really matter what the selector is
+
+
+    // $('#gitshow1').repo({ user: 'dispersionlab', name: 'gitshow1' })
+
+// console.log(git({
+//   username: 'dispersionlab'
+// }))
+/*
+// Username is the only real requirement, other options are listed below:
+var opts = {
+    username:   'dispersionlab',
+    exclude:    [],                     // Leave out some of the default fields: name, updatedAt, description
+    include:    [],                     // Include additional information from the GitHub repositories endpoint
+    limit:      10,                     // Limit the number of repos added to div
+    limitText:  'test'                  // Text to appear in the link back to the Owner's GitHub page, does nothing if no limit property or not enough repos
+};
+*/
+
+
+fetch('https://api.github.com/repos/dispersionlab/gitShow1/contents/score1.md')
+  .then(
+    function(response) {
+      if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+        return;
+      }
+
+      // Examine the text in the response
+      response.json().then(function(data) {
+        //console.log(data.content);
+
+        score = data.content
+
+        decoded_content = atob(score)
+        console.log(decoded_content)
+
+        document.getElementById('score1').innerHTML =
+            marked(decoded_content);
+
+      });
+    }
+  )
+  .catch(function(err) {
+    console.log('Fetch Error :-S', err);
+  });
+
+
+  </script>
+</html>
+
