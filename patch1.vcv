@@ -32,7 +32,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.813000381
+          "value": 0.986999989
         },
         {
           "id": 1,
@@ -66,7 +66,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.575494945
+          "value": 1.38118042e-28
         },
         {
           "id": 1,
@@ -74,7 +74,7 @@
         },
         {
           "id": 2,
-          "value": 0.485500067
+          "value": 0.423999965
         },
         {
           "id": 3,
@@ -82,7 +82,7 @@
         },
         {
           "id": 4,
-          "value": 0.469000012
+          "value": 0.0
         }
       ],
       "leftModuleId": 17,
@@ -163,23 +163,23 @@
       "params": [
         {
           "id": 0,
-          "value": 0.478500128
+          "value": 0.0
         },
         {
           "id": 1,
-          "value": 0.43350032
+          "value": 0.0284999982
         },
         {
           "id": 2,
-          "value": 0.570000112
+          "value": 0.66299969
         },
         {
           "id": 3,
-          "value": 0.0404999964
+          "value": 0.418500572
         },
         {
           "id": 4,
-          "value": 0.178499997
+          "value": 0.0
         },
         {
           "id": 5,
@@ -237,7 +237,7 @@
         },
         {
           "id": 2,
-          "value": 3.33999968
+          "value": 2.87199807
         },
         {
           "id": 3,
@@ -271,7 +271,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.55000007
+          "value": 1.01100004
         },
         {
           "id": 1,
@@ -281,7 +281,7 @@
       "leftModuleId": 23,
       "data": {
         "format": "wav",
-        "path": "/Users/mp/_gitshows/gitShow1/recording1.wav",
+        "path": "",
         "incrementPath": true,
         "sampleRate": 44100,
         "depth": 16,
@@ -490,7 +490,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.602499902
+          "value": 0.524500251
         },
         {
           "id": 1,
@@ -525,7 +525,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.02700019
+          "value": 0.990000248
         },
         {
           "id": 1,
@@ -659,28 +659,12 @@
       "color": "#c91847"
     },
     {
-      "id": 336,
-      "outputModuleId": 2,
-      "outputId": 1,
-      "inputModuleId": 1,
-      "inputId": 0,
-      "color": "#0986ad"
-    },
-    {
       "id": 337,
       "outputModuleId": 4,
       "outputId": 1,
       "inputModuleId": 2,
       "inputId": 2,
       "color": "#c9b70e"
-    },
-    {
-      "id": 343,
-      "outputModuleId": 2,
-      "outputId": 1,
-      "inputModuleId": 22,
-      "inputId": 2,
-      "color": "#c91847"
     },
     {
       "id": 344,
@@ -771,9 +755,25 @@
       "color": "#0c8e15"
     },
     {
-      "id": 338,
+      "id": 343,
       "outputModuleId": 2,
-      "outputId": 2,
+      "outputId": 1,
+      "inputModuleId": 22,
+      "inputId": 2,
+      "color": "#c91847"
+    },
+    {
+      "id": 380,
+      "outputModuleId": 2,
+      "outputId": 0,
+      "inputModuleId": 1,
+      "inputId": 0,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 381,
+      "outputModuleId": 2,
+      "outputId": 0,
       "inputModuleId": 1,
       "inputId": 1,
       "color": "#0c8e15"
