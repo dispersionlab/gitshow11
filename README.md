@@ -88,7 +88,7 @@ What you say about your changes (and how often you commit them) helps participan
 	![record](/Users/mp/_gitshows/gitShow1/admin/recordModule.jpeg)
 	
 	1. There is a limitation with the VCV record module, which won't work between sessions or when the path of the patch is changed (i.e. with git). The workaround we found was to remove the record module from patch#.vcv, and then add it again from the module browser. 
-	2. Connect signals to either mono or stereo inputs of the record module, and when ready to record, press the grey button. Save the file in the /gitshow# folder as gitshow#.wav. Click *YES* when asked if you want to overwrite the file. 
+	2. Connect signals to either mono or stereo inputs of the record module, and when ready to record, press the grey button. Save the file in the /gitshow# folder as recording#.wav. Click *YES* when asked if you want to overwrite the file. 
 	3.  Record a short performance of your patch and save it as recording#.wav. This recording could be entirely generative output, or an improvisation, or a performance of your score. 
 	4. Please limit the file size to no more than 20MB. 
 
