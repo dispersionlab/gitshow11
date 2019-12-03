@@ -121,12 +121,50 @@ What you say about your changes (and how often you commit them) helps participan
 
 We'll meet in the dispersion lab for a group improvisation, at 12pm on the last Thursday of a session -- Michael will be in touch to inform you of the date. Steps **9 and 10** must be completed before the improvisation meetup. 
 
+**new as of session 4:** For the improvisation, we will be committing the changes made to the VCV patch. 
+
+Steps to get ready for a gitshow improvisation:
+
+1. ensure you have completed steps 9 & 10 above!
+
+2. create a new branch, call it '2.#.improvisation' (where # is the session number, same as in step 9)
+
+```shell
+git checkout -b 2.#.improvisation
+```
+i.e. for the session 4 improvisation, you'd do 
+
+```shell
+git checkout -b 2.4.improvisation
+```
+
+So now, all of your changes to the vcv rack patch (and possibly the module code!) will be committed to this new branch. 
+
+3. Ideally, have a terminal window open next to VCV rack, and when you encounter an interesting patch during the jam, save the patch and write a commit: 
+
+```shell
+git commit -am "write something about the patch or maybe something about the jam"
+```
+
+4. Once the improvisation is over, commit the last of your changes
+
+5. Push the new branch to github.com
+
+```shell
+git push -u origin 2.#.improvisation
+```
+
+6. switch back to the master branch of the repository
+
+```shell
+git checkout master
+```
+
+
 Shortly after this date, I'll reassign the repositories for the next session.  
 
-
-
 ## git commands
-work in progress. coming soon.
+work in progress. if you want more help with this, tag me in a post in the [primary gitshow problems/questions thread](https://github.com/dispersionlab/gitshow/issues/7) and ask what you'd like to know how to do. 
 
 We use a tagging system to keep track of significant commits, typically those made at the end of each session. To view the tags made thus far, run:
 
