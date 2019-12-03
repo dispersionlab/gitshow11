@@ -1,8 +1,8 @@
 # gitshow instructions/reference
 
-I highly recommend you open this README.md file in a markdown editor so you can see the formatted content (images, etc). 
+I highly recommend you open this README.md file in a markdown editor so you can see the formatted content (images, links, etc). See the next section for recommended markdown editors:
 ## Recommended tools
-1. For viewing the readme & the score in markdown: [MacDown (OSX)](https://macdown.uranusjr.com/), [Typora (Linux, Windows)](https://alternativeto.net/software/typora/)
+1. For viewing the readme & the score in markdown: [MacDown (OSX)](https://macdown.uranusjr.com/), [Typora (Linux, Windows)](https://alternativeto.net/software/typora/). 
 2. For editing javascript: Visual Studio Code Insiders [https://code.visualstudio.com/insiders/](https://code.visualstudio.com/insiders/) (It includes an integrated terminal, which is handy for committing changes to git). 
 
 
