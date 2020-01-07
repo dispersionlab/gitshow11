@@ -1,5 +1,7 @@
 # Weekly Gitshow Process
 
+If you need help or have any questions/feedback on this process, check the [wiki](https://github.com/dispersionlab/gitshow/wiki) in the gitshow admin repo. If you can't find help there, check the [issues threads](https://github.com/dispersionlab/gitshow/issues) in the admin repo or post a new issue there. Make sure to tag @michaelpalumbo in your issue. 
+
 IMPORTANT: Note that all filenames referenced in this readme include a #. This is a placeholder for the numbered gitshow repo. i.e. if you're working in gitshow2, then all files in that repo should be named:
 
 - recording2.wav
@@ -97,4 +99,4 @@ It is **extremely important** that you follow the exact steps detailed in this d
 	git pull
 	
 	git push
-	```
+	```> 
