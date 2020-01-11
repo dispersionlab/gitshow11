@@ -21,6 +21,9 @@ It is **extremely important** that you follow the exact steps detailed in this d
 # The Process
 
 1. Clone the repository you've been assigned and open it on your computer
+**Open Terminal: cd + (PATH/the repository)**
+**Initialized the repository on Terminal: git init**
+	   
 2. open *reflections.md* in a markdown editor, erase all of the content, and save the file. Leave this document open. 
 3. open *score.md*, and read it at least once. 
 4. listen to recording.wav several times and follow along with *score.md*
