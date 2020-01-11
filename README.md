@@ -62,6 +62,7 @@ git init
 	```shell
 	git add --all
 	```
+	**and make a commit again
 9. With the score now in blockquotes, continue to listen to the recording, but now insert your own reflections on the score and recording, making specific notes below areas of interest, and also noting the time(s) in the recording.
 
 	> low, sustained tone at medium intensity, gradually fades over ~45 seconds
