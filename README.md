@@ -54,6 +54,14 @@ git init
 	```shell
 	git commit -am "beginning to reflect on the score and recording"
 	```
+	**if the error message shows up
+	```shell
+	nothing added to commit but untracked files present
+	```
+	**then write 
+	```shell
+	git add --all
+	```
 9. With the score now in blockquotes, continue to listen to the recording, but now insert your own reflections on the score and recording, making specific notes below areas of interest, and also noting the time(s) in the recording.
 
 	> low, sustained tone at medium intensity, gradually fades over ~45 seconds
