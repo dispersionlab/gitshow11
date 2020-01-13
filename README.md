@@ -21,16 +21,7 @@ It is **extremely important** that you follow the exact steps detailed in this d
 # The Process
 
 1. Clone the repository you've been assigned and open it on your computer
-
-**Open Terminal** 
-```shell
-cd  PATH/the repository
-```
-**Initialized the repository on Terminal**
-```shell
-git init
-```
-	   
+	- instructions for cloning, and other git commands can be accessed in the [primary gitshow wiki](https://github.com/dispersionlab/gitshow/wiki/using-git#clone)	   
 2. open *reflections.md* in a markdown editor, erase all of the content, and save the file. Leave this document open. 
 3. open *score.md*, and read it at least once. 
 4. listen to recording.wav several times and follow along with *score.md*
@@ -54,15 +45,6 @@ git init
 	```shell
 	git commit -am "beginning to reflect on the score and recording"
 	```
-	**if the error message shows up
-	```shell
-	nothing added to commit but untracked files present
-	```
-	**then write 
-	```shell
-	git add --all
-	```
-	**and make a commit again
 9. With the score now in blockquotes, continue to listen to the recording, but now insert your own reflections on the score and recording, making specific notes below areas of interest, and also noting the time(s) in the recording.
 
 	> low, sustained tone at medium intensity, gradually fades over ~45 seconds
