@@ -1,4 +1,25 @@
-##Score:
+>### module2 description
+>module2.js is logical comparator. It takes signal inputs in Inputs 1 & 2, and outputs the Max, Min, Mix of the two signals out Outputs 1, 2, 3, respectively.
+
+>- Inputs: IN1, IN2
+>- Outputs: OUT1, OUT2, OUT3
+
+>## Score:
+
+>Build a rhythmic pattern using the highlighted controls - culminating in noise morphing into tone.
+
+><img src="https://66.media.tumblr.com/9f7fbc0fcf580d4fbea4c3c003109693/e14198e1f24d4430-54/s1280x1920/e3633cbb5822c142a4f492410d9baab4e0440e27.png">
+
+>
+
+>Play with the first 4 prototype knobs to vary timbres produced - some have directly gitchy effects while moved.
+
+>The top highlighted vcf acts as a filter for various frequency components of the generated audio - sweep in.
+
+>The bottom highlighted lfo-1 controls the triggering of granulator freezes and texture cv.
+
+>Play with the blend knob on texture synth to define how clean the signal out is.
+
 ####Reference: Wing on Wing
 ###Theme: "Sound of Air_MirrorGarden" the extender of my previous sound work
 #####Description:

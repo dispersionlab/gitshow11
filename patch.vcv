@@ -9,14 +9,14 @@
       "params": [
         {
           "id": 0,
-          "value": 0.987000167
+          "value": 1.00500023
         },
         {
           "id": 1,
           "value": 0.0
         }
       ],
-      "leftModuleId": 61,
+      "leftModuleId": 60,
       "data": {
         "format": "wav",
         "path": "/Users/RAC.H/Desktop/gitshow11-master/recording_002.wav",
@@ -26,8 +26,8 @@
         "bitRate": 320000
       },
       "pos": [
-        113,
-        1
+        122,
+        0
       ]
     },
     {
@@ -151,7 +151,7 @@
       "params": [
         {
           "id": 0,
-          "value": 100.0
+          "value": 118.0
         },
         {
           "id": 1,
@@ -233,7 +233,7 @@
       "rightModuleId": 48,
       "data": {
         "panelTheme": 0,
-        "running": true,
+        "running": false,
         "displayDelayNoteMode": true,
         "bpmDetectionMode": true,
         "restartOnStopStartRun": 0,
@@ -364,7 +364,6 @@
         }
       ],
       "leftModuleId": 39,
-      "rightModuleId": 41,
       "data": {
         "onstate": 1
       },
@@ -401,7 +400,7 @@
         },
         {
           "id": 5,
-          "value": 0.5
+          "value": 0.357500196
         },
         {
           "id": 6,
@@ -421,7 +420,7 @@
         },
         {
           "id": 10,
-          "value": 0.0
+          "value": 0.0329999998
         },
         {
           "id": 11,
@@ -429,7 +428,7 @@
         },
         {
           "id": 12,
-          "value": 0.5
+          "value": 2.13199997
         },
         {
           "id": 13,
@@ -504,8 +503,6 @@
           "value": 1.0
         }
       ],
-      "leftModuleId": 40,
-      "rightModuleId": 42,
       "data": {
         "frozen": false,
         "freezeToggle": false,
@@ -517,7 +514,7 @@
         "outputSaturation": 0
       },
       "pos": [
-        84,
+        87,
         0
       ]
     },
@@ -529,19 +526,18 @@
       "params": [
         {
           "id": 0,
-          "value": 0.965000153
+          "value": 0.0
         },
         {
           "id": 1,
           "value": 0.0
         }
       ],
-      "leftModuleId": 41,
       "data": {
         "onstate": 1
       },
       "pos": [
-        96,
+        101,
         0
       ]
     },
@@ -602,7 +598,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0450000204
+          "value": -0.0900000036
         },
         {
           "id": 1,
@@ -655,7 +651,7 @@
         "linearLevel": false
       },
       "pos": [
-        37,
+        41,
         1
       ]
     },
@@ -720,7 +716,7 @@
         "linearLevel": false
       },
       "pos": [
-        47,
+        51,
         1
       ]
     },
@@ -1068,14 +1064,15 @@
       "version": "1.1.6",
       "model": "AudioInterface",
       "params": [],
+      "rightModuleId": 22,
       "data": {
         "audio": {
           "driver": 5,
           "deviceName": "Apple Inc.: Built-in Output",
           "offset": 0,
           "maxChannels": 8,
-          "sampleRate": 44100,
-          "blockSize": 256
+          "sampleRate": 96000,
+          "blockSize": 1024
         }
       },
       "pos": [
@@ -1091,11 +1088,11 @@
       "params": [
         {
           "id": 0,
-          "value": 0.286999583
+          "value": 0.0
         },
         {
           "id": 1,
-          "value": 0.570000112
+          "value": 0.636000216
         },
         {
           "id": 2,
@@ -1107,7 +1104,7 @@
         },
         {
           "id": 4,
-          "value": 0.546000004
+          "value": 0.959999919
         },
         {
           "id": 5,
@@ -1119,7 +1116,6 @@
         }
       ],
       "leftModuleId": 59,
-      "rightModuleId": 22,
       "pos": [
         103,
         1
@@ -1146,7 +1142,7 @@
       ],
       "rightModuleId": 45,
       "pos": [
-        29,
+        33,
         1
       ]
     },
@@ -1188,7 +1184,7 @@
       "leftModuleId": 46,
       "rightModuleId": 64,
       "pos": [
-        57,
+        61,
         1
       ]
     },
@@ -1209,7 +1205,7 @@
       ],
       "leftModuleId": 63,
       "pos": [
-        67,
+        71,
         1
       ]
     }
