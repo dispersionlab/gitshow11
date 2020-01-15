@@ -64,10 +64,9 @@ It is **extremely important** that you follow the exact steps detailed in this d
 	- some scores may be entirely technical in the writing (like an instruction manual), while at another extreme others are representations of the recordings, others still more abstract. Does the approach appeal to you? Is it effective? You can respond to this directly. 
 	- remember to save and commit your changes **very often**, be generously descriptive in your commit messages!
 
-12. Reopen the *score.md*, and then open the file *patch.vcv* in VCV Rack, and experiment with performing the score several times. Add nodes about this process in the *reflections.md* document, remembering to save & commit your changes. 
+12. Reopen the *score.md*, and then open the file *patch.vcv* in VCV Rack, and experiment with performing the score several times. Add notes about this process in the *reflections.md* document, remembering to save & commit your changes. 
 
-13. Copy the entire contents of *reflections.md* into the blank *score.md*
-14. Begin to compose a new version of the score in *score.md* and make a newer version of *patch.vcv*:
+13. Begin to compose a new version of the score in *score.md* and make a newer version of *patch.vcv*:
 	- you can include as much or as little of the previous version of the score as you like. 
 	- drawing from your own notes, add, duplicate, remove, or refine compositional elements
 	- consider that markdown files can embed images and other content, so a score doesn't have to be limited to text... 
@@ -75,18 +74,18 @@ It is **extremely important** that you follow the exact steps detailed in this d
 	- Add new patch cables, add/remove modules, etc. 
 	- remember to save and commit your changes **very often**, be generously descriptive in your commit messages!
 
-15. Practice performing the score (maximum length is 90 seconds!). 
+14. Practice performing the score (maximum length is 90 seconds!). 
 
-16. To record yourself, locate the record module in the patch (or add one if it isn't there). Right-click it, and ensure the following settings:
+15. To record yourself, locate the record module in the patch (or add one if it isn't there). Right-click it, and ensure the following settings:
 	- under 'Output File':
 		- Click the /path/to/the/recording.wav (might be 'Select...'), and ensure that this path is pointing to **the 'recording.wav' in this week's repository, not the one from last week** i.e. the same folder that this readme.md is located in... 
 		-  ensure that 'Append -001, -002, etc.' is **not enabled** (i.e. no checkmark)
 	- under 'audio formats':
 		- .wav is selected
+	
+16. Each time you record using this module, it will overwrite the previous recording.wav, so remember to commit each version of recording.wav.
 
-17. Each time you record using this module, it will overwrite the previous recording.wav, so remember to commit each version of recording.wav.
-
-18. When the score, recording, and patch are completed, save and commit any last changes, and update the remote github repo:
+17. When the score, recording, and patch are completed, save and commit any last changes, and update the remote github repo:
 
 	```shell
 	git commit -am "type a message about this commit..."
