@@ -14,4 +14,6 @@
 	
 >![](https://static.wixstatic.com/media/fd9b16_81591df4d12c4c82b2efea4b193ee6de~mv2.png/v1/fill/w_1960,h_1174,al_c,q_95,usm_0.66_1.00_0.01/RAC_H_14012020_SoundOfAir_MirrorGarden_p.webp)
 
-Yes
+This piece has many eitherial qualities, most noticeable  of which is the faint ringing noises that act as its melody. These sounds usually consist of consistent tones that rise and fall in pitch throughout the piece. Around the one minute mark, they begin to rise and fall in tone in a sustained manner before before returning to thier original structure of the rest of the piece. 
+
+The percussion  featured in the piece remains constant, however the structure of the noise changes over time, starting off as a clicking sound at the beginning of the piece, becoming a distorted thumping sound at the 30 second mark. It fades away for a moment before returning ot its original volume, and fluctuates in volume for the rest of the piece. 
