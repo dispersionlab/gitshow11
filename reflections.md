@@ -17,3 +17,5 @@
 This piece has many eitherial qualities, most noticeable  of which is the faint ringing noises that act as its melody. These sounds usually consist of consistent tones that rise and fall in pitch throughout the piece. Around the one minute mark, they begin to rise and fall in tone in a sustained manner before before returning to thier original structure of the rest of the piece. 
 
 The percussion  featured in the piece remains constant, however the structure of the noise changes over time, starting off as a clicking sound at the beginning of the piece, becoming a distorted thumping sound at the 30 second mark. It fades away for a moment before returning ot its original volume, and fluctuates in volume for the rest of the piece. 
+
+In order to improve the initial experience of the next person to experiment with this piece, and attempt to reverse engineer the synthesizer to remove its non-vcv components has been started. While this may effect the final sound of the piece, I believe it will not only allow for a more thorough understanding of the software, but also make the synthesizer more approachable for the next user.
