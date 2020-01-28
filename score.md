@@ -1,9 +1,26 @@
+####Reference: Staggered dance steps
 
-####Reference: Wing on Wing
-###Theme: "Sound of Air_MirrorGarden" the extender of my previous sound work
 #####Description:
-######Initially, the working goal I set for myself this week was to remove as many dependencies as possible from this patch. While not wholly successful, since many integral modules such as the turing machine were plugins, I greatly reduced the number of plugins required for the project to run. This was mostly accomplished through the replacement of whatever parts I could with VCV core modules, such as the use of the default VCV sequencer in place of its ordinal clock. Hopefully this makes this branch more usable going forward, for whoever has it next week.
 
-Once this task was completed, the goal then became to make the synthesizer easier to control. After some experimentation, most control was passed on to two modules, a Befaco Rampage and a Befaco Spring Reverb. The synthesizer is controlled through the four sliders on these two modules.
+Keeping the original part from file, make rhythm, sound and other adjustments.
+Added two new rhythm and sound mixes, create new rhythms and control rhythms through modules such as SEQ, ADSR.
+At the beginning I used the modal synthesizer and responder that I used last week, but these two modules are not very operable, so I replaced them with VCO direct output.
 
+<img src= "https://drive.google.com/uc?export=view&id=1tHFCHvyAb0X5YMZJ5EW2dp-scVIx4dP2">
 
+>The six controllers at the top are the main controllers of this instrument. The three on the left control the tones and the three on the right control the volume.
+
+>At the beginning, the three VCOs on the top left were adjusted to one third,
+
+>The first column of the two spring reverbs on the right is adjusted to the highest and the other three columns remain unchanged.
+
+>Maximize the three VCF modulations in the first row,
+
+>Turn the clock of the leftmost SEQ to half,
+
+>Adjust the remaining columns of the right spring reverb to the maximum,
+Adjust the top three VCOs to two thirds,
+
+>(Free to play here)
+
+>At the end, turn the spring reverb from right to left to the lowest order.
