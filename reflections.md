@@ -21,3 +21,11 @@ Adjust the top three VCOs to two thirds,
 >>(Free to play here)
 
 >>At the end, turn the spring reverb from right to left to the lowest order.
+
+It started with a continuous percussion, which quickly turned into something like an orchestral sound with tonality and rhythm.
+
+The tempo gradually accelerated and the tune became cheerful.
+Gradually added a percussion sound that echoes the main rhythm, and another mixed sound that is a bit like an echo.
+
+The tones of several voices gradually increased and became crisp.
+Slowly to the end, first the mix in the background disappears, then the percussion slowly disappears, but the pitch of the main rhythmic sound rises again. Finally the sound slowly faded to the end.
