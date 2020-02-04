@@ -20,7 +20,7 @@
       "rightModuleId": 60,
       "data": {
         "format": "wav",
-        "path": "D:\\Documents\\GitHub\\gitshow11/recording.wav",
+        "path": "F:\\Dropbox\\Grad-School\\YorkU\\VSL\\gitshow11/recording.wav",
         "incrementPath": false,
         "sampleRate": 44100,
         "depth": 24,
@@ -1205,7 +1205,7 @@
         },
         {
           "id": 1,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 2,
@@ -1217,7 +1217,7 @@
         },
         {
           "id": 4,
-          "value": 0.0
+          "value": 1.0
         },
         {
           "id": 5,
@@ -1297,7 +1297,7 @@
         },
         {
           "id": 24,
-          "value": 0.912091255
+          "value": 0.909004629
         },
         {
           "id": 25,
@@ -1584,11 +1584,11 @@
         },
         {
           "id": 24,
-          "value": 0.625500381
+          "value": 0.709502041
         },
         {
           "id": 25,
-          "value": 0.0
+          "value": 1.0
         }
       ],
       "leftModuleId": 89,
@@ -2055,7 +2055,7 @@
         },
         {
           "id": 12,
-          "value": 0.714090645
+          "value": 0.0
         },
         {
           "id": 13,
@@ -2688,6 +2688,22 @@
       "inputModuleId": 133,
       "inputId": 7,
       "color": "#0986ad"
+    },
+    {
+      "id": 657,
+      "outputModuleId": 98,
+      "outputId": 0,
+      "inputModuleId": 22,
+      "inputId": 2,
+      "color": "#c9b70e"
+    },
+    {
+      "id": 658,
+      "outputModuleId": 98,
+      "outputId": 1,
+      "inputModuleId": 22,
+      "inputId": 3,
+      "color": "#0c8e15"
     }
   ]
 }
