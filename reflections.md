@@ -11,3 +11,9 @@ Similar to the last repo that I had to work on, this score doesn't focus on the 
 The recording itself stays much the same throughout, feeling very sparse, with each step in what is felt to be the sequence lasting a couple of beats. A third of the way through a kind of drone note comes in, giving more depth to the piece. There is a considerable amount of echo, and reverb applied, likely due to the spring reverb that is core to the instrument.
 
 I feel that a greater knowledge of what I'm dealing with will be gained by looking at the instrument. While I want to stay with the theme of keeping it all in VCV default modules, I don't know if I will be able to resist putting some more advanced distortion, or modulation modules in the patch.
+
+# Performance
+
+The instrument is very interesting to play. The reverb gives it a very nice, open effect. It feels very different from the last couple of instruments I've started with, and then made. Especially in terms of how simple the sound is. I was surprised with how many non-VCV fundamental modules there were given the score, but this has just given me ideas for how to expand on it better.
+
+Performing the exact score is interesting, as the score isn't so much of a set song, and the Turing machine handles much of that task. But 'playing' the reverb was interesting and entertaining.
